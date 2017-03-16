@@ -11,8 +11,22 @@
         });
     }
 
+    function dateLocale() {
+        moment.locale("fr");
+
+        $(".post-date").each(function (i, date) {
+            var $date = $(date);
+
+            $date.html(
+                moment($date.attr("datetime"))
+                    .format("LL")
+            );
+        });
+    }
+
     $(document).ready(function () {
         runMenu();
+        dateLocale();
     });
 
 })();

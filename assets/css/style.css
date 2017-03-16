@@ -7389,3 +7389,38 @@ article header ul {
 article header ul a {
   color: #777777;
 }
+
+.author-thumb {
+  height: 20px;
+}
+
+nav.pagination {
+  width: 100%;
+  text-align: right;
+}
+
+footer.site-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+header.post-header {
+  margin-bottom: 15px;
+}
+
+article h1 {
+  font-size: 2.2em;
+}
+
+article h2 {
+  font-size: 2em;
+}
+article h3 {
+  font-size: 1.8em;
+}
+article h4 {
+  font-size: 1.5em;
+}
+article h5 {
+  font-size: 1.2em;
+}
