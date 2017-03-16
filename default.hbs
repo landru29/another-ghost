@@ -34,14 +34,16 @@
     <nav class="main">
         <header class="main">
             <h1 class="main-title">
-                <span>{{@blog.title}}</span>
+                <a class="title" href="/">              
+                    <span>{{@blog.title}}</span>
+                </a>
                 <small>{{@blog.description}}</small>
             </h1>
         </header>
-        <ul id="menu">
-            <li>
-                <a href="#">Menu01</a>
-            </li>
+        {{navigation}}
+
+        <!--<ul id="menu">
+        
             <li>
                 <a href="#">Menu02
                     <i class="fa fa-caret-right collapsed" aria-hidden="true"></i>
@@ -59,16 +61,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="#">Menu03</a>
-            </li>
-            <li>
-                <a href="#">Menu04</a>
-            </li>
-            <li>
-                <a href="#">Menu05</a>
-            </li>
-        </ul>
+        </ul>-->
 
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>

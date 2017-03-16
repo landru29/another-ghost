@@ -83,7 +83,67 @@
 
 @font-face {
   font-family: "Afta Sans";
-  src: url("../fonts/AftaSansThin-Regular.otf");
+  src: url("../fonts/AftaSansThin-Regular.otf?v=1");
+}
+
+@font-face {
+    font-family: "casper-icons";
+    src:url("../fonts/casper-icons.eot?v=1");
+    src:url("../fonts/casper-icons.eot?v=1#iefix") format("embedded-opentype"),
+        url("../fonts/casper-icons.woff?v=1") format("woff"),
+        url("../fonts/casper-icons.ttf?v=1") format("truetype"),
+        url("../fonts/casper-icons.svg?v=1#icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply these base styles to all icons */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "casper-icons", "Open Sans", sans-serif;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Each icon is created by inserting the correct character into the
+   content of the :before pseudo element. Like a boss. */
+.icon-ghost:before {
+    content: "\f600";
+}
+.icon-feed:before {
+    content: "\f601";
+}
+.icon-twitter:before {
+    content: "\f602";
+    font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\f603";
+}
+.icon-facebook:before {
+    content: "\f604";
+}
+.icon-arrow-left:before {
+    content: "\f605";
+}
+.icon-stats:before {
+    content: "\f606";
+}
+.icon-location:before {
+    content: "\f607";
+    margin-left: -3px; /* Tracking fix */
+}
+.icon-link:before {
+    content: "\f608";
+}
+.icon-menu:before {
+    content: "\f609";
 }
 
 body {
@@ -101,9 +161,13 @@ h1 {
         font-family: "Afta Sans";
         font-size: 2.5em;
 
-        span {
-            display: block;
-            font-size: 1.3em;
+        a {
+            text-decoration: none;
+            color: inherit;
+            span {
+                display: block;
+                font-size: 1.3em;
+            }
         }
 
         small {
@@ -191,24 +255,23 @@ header.main {
     }
 }
 
-
-
 div.container {
     margin-left: @headerWidth;
     padding: 20px;
 }
 
 
-.author-image {
+/*.author-image {
   background-position: center center;
   background-size: cover;
   border-radius: 4px;
   display: inline-block;
   height: 18px;
   vertical-align: top;
-  width: 18px; }
+  width: 18px; 
+}*/
 
-  article {
+article {
     header {
         ul {
             color: @gray-light;
@@ -232,7 +295,7 @@ div.container {
     h5 {
         font-size: 1.2em;
     }
-  }
+}
 
 .author-thumb {
   height: 20px;
@@ -250,4 +313,67 @@ footer.site-footer {
 
 header.post-header {
   margin-bottom: 15px;
+}
+
+.post-footer {
+    position: relative;
+    margin: 6rem 0 0 0;
+    padding: 3rem 0 0 0;
+    border-top: solid 1px @gray-light;
+
+    .share {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        width: 140px;
+
+        a {
+            font-size: 1.8rem;
+            display: inline-block;
+            margin: 1rem 1.6rem 1.6rem 0;
+            color: #BBC7CC;
+            text-decoration: none;
+        }
+
+        .icon-twitter:hover {
+            color: #55acee;
+        }
+
+        .icon-facebook:hover {
+            color: #3b5998;
+        }
+
+        .icon-google-plus:hover {
+            color: #dd4b39;
+        }
+    }
+}
+
+
+.author-image {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 6px;
+    background: @panel-footer-bg;
+    z-index: 2;
+    box-shadow: @gray-light 0 0 0 1px;
+    .img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 100%;
+    }
 }
