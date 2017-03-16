@@ -1,0 +1,253 @@
+@import "./bootstrap/less/navbar.less";
+@import "./bootstrap/less/thumbnails.less";
+@import "./bootstrap/less/breadcrumbs.less";
+@import "./bootstrap/less/popovers.less";
+@import "./bootstrap/less/jumbotron.less";
+@import "./bootstrap/less/forms.less";
+@import "./bootstrap/less/labels.less";
+@import "./bootstrap/less/modals.less";
+@import "./bootstrap/less/theme.less";
+@import "./bootstrap/less/buttons.less";
+@import "./bootstrap/less/bootstrap.less";
+@import "./bootstrap/less/wells.less";
+@import "./bootstrap/less/mixins.less";
+@import "./bootstrap/less/button-groups.less";
+@import "./bootstrap/less/carousel.less";
+@import "./bootstrap/less/variables.less";
+@import "./bootstrap/less/type.less";
+@import "./bootstrap/less/glyphicons.less";
+@import "./bootstrap/less/print.less";
+@import "./bootstrap/less/tables.less";
+@import "./bootstrap/less/tooltip.less";
+@import "./bootstrap/less/mixins/clearfix.less";
+@import "./bootstrap/less/mixins/text-emphasis.less";
+@import "./bootstrap/less/mixins/nav-vertical-align.less";
+@import "./bootstrap/less/mixins/progress-bar.less";
+@import "./bootstrap/less/mixins/vendor-prefixes.less";
+@import "./bootstrap/less/mixins/hide-text.less";
+@import "./bootstrap/less/mixins/reset-text.less";
+@import "./bootstrap/less/mixins/text-overflow.less";
+@import "./bootstrap/less/mixins/forms.less";
+@import "./bootstrap/less/mixins/labels.less";
+@import "./bootstrap/less/mixins/resize.less";
+@import "./bootstrap/less/mixins/opacity.less";
+@import "./bootstrap/less/mixins/buttons.less";
+@import "./bootstrap/less/mixins/border-radius.less";
+@import "./bootstrap/less/mixins/background-variant.less";
+@import "./bootstrap/less/mixins/reset-filter.less";
+@import "./bootstrap/less/mixins/nav-divider.less";
+@import "./bootstrap/less/mixins/panels.less";
+@import "./bootstrap/less/mixins/table-row.less";
+@import "./bootstrap/less/mixins/grid-framework.less";
+@import "./bootstrap/less/mixins/alerts.less";
+@import "./bootstrap/less/mixins/responsive-visibility.less";
+@import "./bootstrap/less/mixins/pagination.less";
+@import "./bootstrap/less/mixins/tab-focus.less";
+@import "./bootstrap/less/mixins/grid.less";
+@import "./bootstrap/less/mixins/center-block.less";
+@import "./bootstrap/less/mixins/image.less";
+@import "./bootstrap/less/mixins/gradients.less";
+@import "./bootstrap/less/mixins/size.less";
+@import "./bootstrap/less/mixins/list-group.less";
+@import "./bootstrap/less/panels.less";
+@import "./bootstrap/less/pager.less";
+@import "./bootstrap/less/dropdowns.less";
+@import "./bootstrap/less/input-groups.less";
+@import "./bootstrap/less/component-animations.less";
+@import "./bootstrap/less/media.less";
+@import "./bootstrap/less/alerts.less";
+@import "./bootstrap/less/utilities.less";
+@import "./bootstrap/less/normalize.less";
+@import "./bootstrap/less/badges.less";
+@import "./bootstrap/less/pagination.less";
+@import "./bootstrap/less/navs.less";
+@import "./bootstrap/less/grid.less";
+@import "./bootstrap/less/close.less";
+@import "./bootstrap/less/responsive-utilities.less";
+@import "./bootstrap/less/responsive-embed.less";
+@import "./bootstrap/less/progress-bars.less";
+@import "./bootstrap/less/scaffolding.less";
+@import "./bootstrap/less/code.less";
+@import "./bootstrap/less/list-group.less";
+
+/* Small devices (tablets, 768px and up) */
+//@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+//@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+//@media (min-width: @screen-lg-min) { ... }
+
+@headerWidth: 330px;
+
+@font-face {
+  font-family: "Afta Sans";
+  src: url("../fonts/AftaSansThin-Regular.otf");
+}
+
+body {
+    margin:0;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url("../img/background.jpg")
+}
+
+h1 {
+    margin:0;
+    padding:0;
+
+    &.main-title {
+        font-family: "Afta Sans";
+        font-size: 2.5em;
+
+        span {
+            display: block;
+            font-size: 1.3em;
+        }
+
+        small {
+            display: block;
+        }
+    }
+}
+
+nav {
+    &.main {
+        @media (min-width: @screen-lg-min) {
+            padding:20px 20px 0 50px;
+            margin:0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: @headerWidth;
+            height: 100%;
+
+            ul {
+                margin-left: 30px;
+                list-style: none;
+                padding: 0;
+                &>li {
+                    margin:0;
+                    padding: 5px 0 5px 0;
+                }
+            }
+
+            &>ul {
+                margin-left: 20px;
+                padding-left: 30px;
+                border-left: solid 2px;
+                &>li {
+                    a {
+                        color: inherit;
+                        &:hover,&:focus {
+                            text-decoration: none;
+                        }
+                        &:hover{
+                            border-bottom: solid 2px;
+                        }
+                    }
+                    &>ul {
+                        display: none;
+                    }
+
+                    .collapsed {
+                            display: inherit;
+                        }
+                        .expanded {
+                            display: none;
+                        }
+
+                    &.expand {
+                        &>ul {
+                            display: block;
+                        }
+                        .collapsed {
+                            display: none;
+                        }
+                        .expanded {
+                            display: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.sub {
+        margin-left: @headerWidth;
+        padding: 30px 20px 5px 20px;
+        height: 150px;
+
+    }
+   
+}
+
+
+
+header.main {
+    @media (min-width: @screen-lg-min) {
+        padding: 120px 60px 120px 40px;
+    }
+}
+
+
+
+div.container {
+    margin-left: @headerWidth;
+    padding: 20px;
+}
+
+
+.author-image {
+  background-position: center center;
+  background-size: cover;
+  border-radius: 4px;
+  display: inline-block;
+  height: 18px;
+  vertical-align: top;
+  width: 18px; }
+
+  article {
+    header {
+        ul {
+            color: @gray-light;
+            a {
+                color: @gray-light;
+            }
+        }
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.8em;
+    }
+    h4 {
+        font-size: 1.5em;
+    }
+    h5 {
+        font-size: 1.2em;
+    }
+  }
+
+.author-thumb {
+  height: 20px;
+}
+
+nav.pagination {
+  width: 100%;
+  text-align: right;
+}
+
+footer.site-footer {
+  position: absolute;
+  bottom: 0;
+}
+
+header.post-header {
+  margin-bottom: 15px;
+}
