@@ -24,9 +24,23 @@
         });
     }
 
+    function olderNewerPosts() {
+        $("a.older-posts").each(
+            function(index, node) {
+                $(node).contents().first()[0].textContent="Anciens billets";
+            }
+        );
+        $("a.newer-posts").each(
+            function(index, node) {
+                $(node).contents().last()[0].textContent="Nouveaux billets";
+            }
+        );
+    }
+
     $(document).ready(function () {
         runMenu();
         dateLocale();
+        olderNewerPosts();
     });
 
 })();
