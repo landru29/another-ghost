@@ -1,6 +1,6 @@
 {
-  "name": "mixu_minimal",
-  "description": "Minimal router and client",
+  "name": "Another Ghost",
+  "description": "Theme for Ghost",
   "version": "0.0.1",
   "scripts": {
     "test": "lessc style.less > style.css",
