@@ -1,7 +1,11 @@
 <ul id="menu">
     {{#foreach navigation}}
         <li class="{{#if current}} nav-current{{/if}}">
-            <a href="{{url absolute="true"}}">{{label}}</a>
+            <a href="{{url absolute="true"}}">
+                <i class="fa fa-caret-left menu-delimiteur" aria-hidden="true"></i>
+                {{label}}
+                <i class="fa fa-caret-right menu-delimiteur" aria-hidden="true"></i>
+            </a>
         </li>
     {{/foreach}}
 </ul>
